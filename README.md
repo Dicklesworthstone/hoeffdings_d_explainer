@@ -122,7 +122,7 @@ The result of running our program on that input is the following:
     Ranks of Heights (X): [1. 2. 5. 6. 7. 3. 4. 9. 9. 9.]
     Ranks of Weights (Y): [1. 2. 5. 4. 7. 3. 6. 9. 9. 9.]
     Q values: [1.  2.  4.  4.  7.  3.  4.  8.5 8.5 8.5]
-    Hoeffding's D for new data: 0.4107142857142857
+    Hoeffding's D for data: 0.4107142857142857
 
 Believe it or not, we can actually implement all of Hoeffding’s D in just ~15 lines of Python! However, we are going to add lots of comments and also display some intermediate values because the focus is on making this as clear as possible, so we’ll end up with ~75 lines including whitespace. Still not very much though given how much the code is doing!
 
@@ -195,9 +195,9 @@ Here is the complete code:
         D = 30 * ((N - 2) * (N - 3) * D1 + D2 - 2 * (N - 2) * D3) / (N * (N - 1) * (N - 2) * (N - 3) * (N - 4))
         # Return the computed Hoeffding's D value.
         return D
-    # Compute and display Hoeffding's D for the new dataset
+    # Compute and display Hoeffding's D for the dataset
     hoeffd_d = hoeffd_example()
-    print(f"Hoeffding's D for new data: {hoeffd_d}")
+    print(f"Hoeffding's D for data: {hoeffd_d}")
 ```
 
 Now, I mentioned that this implementation, while correct, is quite slow and inefficient. This might be surprising given that we are doing the “heavy lifting” using Numpy and Scipy, which are actually implemented in very efficient compiled C++. It turns out that, given the massive number of operations and comparisons involved, the function overhead is so great that the code really starts to bog down even on a fast machine once you get above 1,000 data points, and doing 5,000 data points would take an extremely long time. 
