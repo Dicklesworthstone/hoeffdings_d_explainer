@@ -125,7 +125,7 @@ The result of running our program on that input is the following:
     Q values: [1.  2.  4.  4.  7.  3.  4.  8.5 8.5 8.5]
     Hoeffding's D for data: 0.4107142857142857
 
-Believe it or not, we can actually implement all of Hoeffding’s D in just ~15 lines of Python! However, we are going to add lots of comments and also display some intermediate values because the focus is on making this as clear as possible, so we’ll end up with ~75 lines including whitespace. Still not very much though given how much the code is doing!
+Believe it or not, we can actually implement all of Hoeffding’s D in just ~15 lines of Python! However, we are going to add lots of comments and also display some intermediate values, because the focus is on making this as clear as possible. So we’ll end up with ~75 lines including whitespace— still not very much given how much the code is doing!
 
 If you want to actually run the code, you can check out this Google Colab notebook here:
 
