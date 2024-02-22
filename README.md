@@ -80,12 +80,6 @@ Since that all still looks pretty complicated, let’s get into what we mean by 
 - The computation of **Q** incorporates adjustments for ties, ensuring that tied ranks contribute appropriately to the overall measure.
 - By considering all other points relative to a given point and incorporating adjustments for ties, **Q** values provide a nuanced view of each point's position within the joint distribution of ranks, which is foundational for assessing the dependency between the two sequences.
 
-**Why Do We Need Q?**
-
-- **Q** values are instrumental in calculating Hoeffding's D because they allow the measure to account for the complex interplay of ranks across all data points, including concordance, discordance, and ties.
-- They enable the measure to capture more subtle and complex relationships between the two sequences, which might be missed by simpler, pairwise-based measures.
-- The detailed consideration of **Q** values in the context of the entire dataset allows Hoeffding's D to provide a robust measure of association that is sensitive to a wider range of dependencies, including non-linear and non-monotonic relationships.
-
 **Clarification of D_1, D_2, D_3**:
 
 These intermediate sums play distinct roles in the calculation of Hoeffding's D:
