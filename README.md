@@ -199,7 +199,7 @@ Now, I mentioned that this implementation, while correct, is quite slow and inef
 
 Luckily, I wrote a much more efficient version in Rust that is easy to use as a python library. You can use this simply by doing:
 
-`pip install fast-vector-similarity` 
+`pip install fast_vector_similarity` 
 
 And you can see the code here:
 
